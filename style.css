@@ -1,86 +1,144 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+/* Reset default styles */
+* {
     margin: 0;
-    background: #f8f9fa;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
 header {
-    background: #212529;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 nav a {
-    color: #38b6ff;
-    margin: 0 10px;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+
+nav a:hover {
+    text-decoration: underline;
 }
-section {
-    margin-bottom: 2rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 50px 0;
 }
-#projects-list {
+
+.container {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bio h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #e9ecef;
+    padding: 50px 0;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
 .project-card {
-    flex: 1 1 300px;
-    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    background: #fafafa;
-    padding: 1rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
 }
+
 .project-card h3 {
-    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
 }
-form label {
-    display: block;
-    margin-bottom: 1rem;
+
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 50px 0;
 }
-form input, form textarea {
-    width: 100%;
-    padding: 0.6rem;
-    margin-top: 0.4rem;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
-button[type="submit"] {
-    background: #38b6ff;
-    color: white;
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
     border: none;
-    padding: 0.7rem 1.3rem;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
 }
-button[type="submit"]:hover {
-    background: #2895d9;
+
+button:hover {
+    background-color: #555;
 }
-#form-response {
-    margin-top: 1rem;
-    color: green;
-}
+
+/* Footer */
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    background: #212529;
-    color: #eee;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    font-size: 0.95rem;
+    padding: 10px 0;
 }
-@media (max-width: 600px) {
-    #projects-list {
-        flex-direction: column;
-    }
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
