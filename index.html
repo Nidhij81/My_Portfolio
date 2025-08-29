@@ -2,56 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nidhi Joshi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Nidhi Joshi | Data Analyst</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f4f7f9;
+            color: #333;
+        }
+        header {
+            background: #1e90ff;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #1e90ff;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .about-me {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .about-me img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid #1e90ff;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skill {
+            background: #1e90ff;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            flex: 1 1 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #1e90ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .contact a:hover {
+            background: #007acc;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .about-me {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-me img {
+                margin: auto;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Nidhi Joshi</h1>
-        <p>Data Analyst | Portfolio</p>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <p>Data Analyst | SQL | Power BI | Excel | Python</p>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hi, I am Nidhi Joshi 👋 — a passionate and detail-oriented Data Analyst with a strong foundation in turning raw data into meaningful insights. With over 6 years of experience in client-facing and analytical roles, I’ve developed a sharp eye for uncovering trends, solving business problems, and communicating data stories that drive decisions.
-                💡 My toolkit includes:
-                SQL – crafting complex queries to clean, transform, and analyze large datasets
-                Power BI – building interactive dashboards and visualizations that bring data to life
-                Excel – advanced formulas, pivot tables, and automation for streamlined reporting
-                Python – applying data analysis, automation, and exploratory techniques
-                I enjoy bridging the gap between data and decision-making, simplifying complexity, and empowering stakeholders with insights they can trust. Whether it’s optimizing performance, spotting hidden opportunities, or tracking KPIs, I thrive on solving problems with data-driven strategies.When I’m not working with data, you’ll find me exploring new tools in the analytics space, staying curious about how AI is shaping the future of data, and continuously upgrading my skills to stay ahead.
-                ✨ My mission: To help businesses harness the full potential of their data and transform it into actionable intelligence.
-            </p>
-        </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div id="projects-list">
-                <!-- Projects will load here -->
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-me">
+            <img src="https://via.placeholder.com/250" alt="Nidhi Joshi">
+            <p>Hello! I’m <strong>Nidhi Joshi</strong>, a passionate Data Analyst who loves turning raw data into meaningful insights. With strong expertise in SQL, Power BI, Excel, and Python, I help businesses make data-driven decisions and uncover hidden opportunities. My mission is to simplify complex data, visualize trends effectively, and empower organizations with actionable intelligence.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill"><i class="fas fa-chart-line"></i> Power BI</div>
+            <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
+            <div class="skill"><i class="fab fa-python"></i> Python</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Sales Dashboard</h3>
+                <p>Interactive Power BI dashboard to track monthly sales performance and KPIs.</p>
             </div>
-        </section>
+            <div class="project-card">
+                <h3>Data Cleaning Automation</h3>
+                <p>Python script to automate data cleaning and preprocessing tasks for analytics.</p>
+            </div>
+            <div class="project-card">
+                <h3>SQL Reporting</h3>
+                <p>Complex SQL queries to generate business intelligence reports from large datasets.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label>Name:<input type="text" name="name" required></label>
-                <label>Email:<input type="email" name="email" required></label>
-                <label>Message:<textarea name="message" required></textarea></label>
-                <button type="submit">Send</button>
-            </form>
-            <div id="form-response"></div>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <a href="mailto:nidhi@example.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/nidhijoshi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/nidhij81" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Nidhi Joshi | <a href="https://github.com/Nidhij81" target="_blank">GitHub</a></p>
+        &copy; 2025 Nidhi Joshi. All rights reserved.
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
